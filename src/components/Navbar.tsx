@@ -2,9 +2,9 @@ import { ConnectButton } from '@rainbow-me/rainbowkit';
 
 const Navbar = () => {
   return (
-    <div>
+    <nav className='flex justify-center'>
       <ConnectButton />
-    </div>
+    </nav>
   );
 };
 
