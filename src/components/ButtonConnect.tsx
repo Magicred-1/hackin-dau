@@ -90,39 +90,20 @@ const Buttonconnect = () => {
                   </button> */}
 
                   {/* TODO: Adding the design to the button */}
-                  <div className='flex flex-col gap-1'>
+                  <div className='flex gap-4'>
                     <button
                       onClick={openAccountModal}
                       type='button'
-                      className='px-4 py-2 text-white rounded-lg bg-[#E9B384] gap-4 items-center justify-center'
+                      className='px-4 py-3 text-white rounded-lg bg-green-800 hover:bg-green-600 duration-300 ease-in-out'
                     >
                       <span>{account.displayName}</span>
-                      <span>
-                        {account.displayBalance
-                          ? `(${account.displayBalance})`
-                          : ''}
-                      </span>
                     </button>
-                    <Link
-                      href={'/play/stake'}
-                      className='rounded-lg bg-[#F0B90B] justify-center items-center px-4 py-2 text-white text-center text-sm'
-                    >
-                      STAKE AND EARN
-                    </Link>
+                    <span className='px-4 py-2 rounded-lg bg-green-800 font-bold text-white flex items-center'>
+                      {account.displayBalance
+                        ? `${account.displayBalance}`
+                        : ''}
+                    </span>
                   </div>
-
-                  <button
-                    className='flex rounded-lg bg-[#E9B384] gap-4 items-center justify-center sm:pr-6 text-white font-bold'
-                    onClick={() => router.push('/play')}
-                  >
-                    <Image
-                      src='/play-icon.png'
-                      alt='coin-icon'
-                      width={80}
-                      height={80}
-                    />
-                    <span className='sm:flex hidden'>Play</span>
-                  </button>
                 </div>
               );
             })()}
