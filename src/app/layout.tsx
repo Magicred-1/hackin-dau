@@ -1,6 +1,6 @@
 import './globals.css';
 import { GlobalContextProvider } from '@/utils/rainbowkit.provider';
-import { Navbar, Footer } from '@/components';
+import { SideBar } from '@/components';
 
 export default function RootLayout({
   children,
@@ -11,9 +11,7 @@ export default function RootLayout({
     <html lang='en'>
       <body>
         <GlobalContextProvider>
-          <Navbar />
-          {children}
-          <Footer />
+          <SideBar>{children}</SideBar>
         </GlobalContextProvider>
       </body>
     </html>

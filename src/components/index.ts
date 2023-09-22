@@ -1,4 +1,4 @@
-import Navbar from './Navbar';
-import Footer from './Footer';
+import SideBar from './SideBar';
+import Buttonconnect from './ButtonConnect';
 
-export { Navbar, Footer };
+export { SideBar, Buttonconnect };
