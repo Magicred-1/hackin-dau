@@ -1,13 +1,8 @@
 'use client';
 
 import { ConnectButton } from '@rainbow-me/rainbowkit';
-import { BiSolidUserCircle } from 'react-icons/bi';
-import Image from 'next/image';
-import { useRouter } from 'next/navigation';
-import Link from 'next/link';
 
 const Buttonconnect = () => {
-  const router = useRouter();
   return (
     <ConnectButton.Custom>
       {({
@@ -41,7 +36,7 @@ const Buttonconnect = () => {
               if (!connected) {
                 return (
                   <button
-                    className='bg-green-800 hover:bg-green-600 cursor-pointer text-white
+                    className='bg-green-800 hover:bg-green-600 duration-300 ease-in-out cursor-pointer text-white
                     text-left px-6 uppercase font-semibold p-3 rounded-lg w-full'
                     onClick={openConnectModal}
                   >
@@ -90,7 +85,7 @@ const Buttonconnect = () => {
                   </button> */}
 
                   {/* TODO: Adding the design to the button */}
-                  <div className='flex gap-4'>
+                  <div className='flex gap-3'>
                     <button
                       onClick={openAccountModal}
                       type='button'
