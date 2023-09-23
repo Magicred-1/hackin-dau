@@ -6,7 +6,7 @@ import { MdOutlineAccountBalance } from 'react-icons/md';
 const page = () => {
   return (
     <div className='grid grid-cols-2 gap-4'>
-      <div className='col-span-1 bg-white rounded-xl p-6'>
+      <div className='col-span-2 lg:col-span-1 bg-white rounded-xl p-6'>
         <div className='flex gap-2 items-center'>
           <BiSolidCoinStack size={30} />
           <h1 className='text-2xl font-bold'>Stake NGC</h1>
@@ -22,7 +22,7 @@ const page = () => {
 
       <Balances />
 
-      <div className='col-span-1 bg-white rounded-xl p-6'>
+      <div className='col-span-2 lg:col-span-1 bg-white rounded-xl p-6'>
         <div className='flex gap-2'>
           <BiReset size={30} />
           <h1 className='text-2xl font-bold items-center'>Rebase</h1>

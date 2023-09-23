@@ -1,19 +1,11 @@
-import { SolarCard } from '@/components';
-import Balances from '@/components/Balances';
-import { BiWalletAlt, BiSolidCollection } from 'react-icons/bi';
+import { BuyOrConnect, Balances, SolarCard } from '@/components';
+import { BiSolidCollection } from 'react-icons/bi';
 
 export default function Home() {
   return (
     <div className='grid grid-cols-2 gap-4 overflow-y-scroll'>
-      <div className='col-span-1 bg-white rounded-xl p-6'>
-        <div className='flex gap-2 items-center'>
-          <BiWalletAlt size={30} />
-          <h1 className='text-2xl font-bold'>Buy HSC</h1>
-        </div>
-        <div className='mt-2 font-semibold text-slate-400'>test</div>
-      </div>
-
       <Balances />
+      <BuyOrConnect />
 
       <div className='col-span-2 bg-white rounded-xl p-6'>
         <div className='flex gap-2'>
@@ -33,7 +25,7 @@ export default function Home() {
             name='premium'
             price={500}
             availableNumber={100}
-            imagePath='/2.png'
+            imagePath='/5.png'
             href='/'
             location='Perpignan, France'
           />

@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { HiLocationMarker } from 'react-icons/hi';
 import { Badge } from '@/components/ui/badge';
 import { TiFlash } from 'react-icons/ti';
+import { shortenAddress } from '@/utils/local';
 interface SolarCardProps {
   name: string;
   imagePath: string;
@@ -9,6 +10,7 @@ interface SolarCardProps {
   availableNumber: number;
   price: number;
   location: string;
+  reseller?: string;
 }
 
 const SolarCard = ({
@@ -18,14 +20,19 @@ const SolarCard = ({
   availableNumber,
   price,
   location,
+  reseller,
 }: SolarCardProps) => {
   return (
-    <div className='bg-white border border-gray-200 rounded-lg shadow col-span-3 xl:col-span-2 relative'>
-      <div className='absolute z-50 bg-slate-200 rounded-tl-lg rounded-r-full pr-2'>
-        <div className='p-2'>
-          <span className='text-xl font-bold'>{availableNumber} remaining</span>
+    <div className='bg-white border border-gray-200 rounded-lg shadow col-span-6 md:col-span-3 xl:col-span-2 relative'>
+      {!reseller && (
+        <div className='absolute z-30 bg-slate-200 rounded-tl-lg rounded-r-full pr-2'>
+          <div className='p-2'>
+            <span className='text-xl font-bold'>
+              {availableNumber} remaining
+            </span>
+          </div>
         </div>
-      </div>
+      )}
       <div className='w-full relative h-[350px]'>
         <Image
           className='rounded-t-lg'
@@ -35,7 +42,7 @@ const SolarCard = ({
           priority
         />
       </div>
-      <div className='p-4'>
+      <div className='p-4 flex flex-col'>
         <div className='flex gap-2 items-center'>
           <HiLocationMarker className='inline-block mr-1' size={25} />
           <h3 className='font-semibold text-xl'>{location}</h3>
@@ -47,6 +54,14 @@ const SolarCard = ({
           </div>
           <Badge className='text-normal text-white'>{name}</Badge>
         </div>
+        {reseller && (
+          <p className='mt-4'>
+            <span className='font-semibold italic text-slate-400 cursor-pointer'>
+              Seller :
+            </span>{' '}
+            {shortenAddress(reseller)}
+          </p>
+        )}
       </div>
       <div className='p-4'>
         <a

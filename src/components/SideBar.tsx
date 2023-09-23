@@ -11,21 +11,21 @@ import {
   BsCashCoin,
 } from 'react-icons/bs';
 import { RxDashboard } from 'react-icons/rx';
-import { RiHandCoinFill } from 'react-icons/ri';
 import { BiSolidCoinStack } from 'react-icons/bi';
 import ButtonConnect from './ButtonConnect';
+import Menu from './Menu';
 
 const Sidebar = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className='flex'>
-      <div className='bg-white border-r-[1px] flex flex-col justify-between min-w-[260px] h-screen z-50'>
+    <div className='flex flex-col sm:flex-row'>
+      <div className='bg-white border-r-[1px] sm:flex hidden flex-col justify-between min-w-[260px] h-screen z-50'>
         <div className='p-4 flex flex-col justify-between h-screen fixed'>
           <div className='flex flex-col'>
             <Link href='/' className='flex gap-4 items-center'>
               <div className='bg-green-800 text-white p-3 rounded-lg'>
                 <GiPlantsAndAnimals size={30} />
               </div>
-              <h1 className='text-xl font-bold'>Negative Carbon</h1>
+              <h1 className='text-xl font-bold'>Hello SunChain</h1>
             </Link>
             <span className='border-b-[1px] border-gray-200 w-full mx-auto mt-4 mb-2 flex'></span>
             <Link href='/'>
@@ -88,6 +88,7 @@ const Sidebar = ({ children }: { children: React.ReactNode }) => {
           </div>
         </div>
       </div>
+      <Menu />
       <main className='w-full p-4 bg-slate-200'>{children}</main>
     </div>
   );

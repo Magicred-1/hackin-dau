@@ -13,7 +13,7 @@ import { shortenAddress } from '@/utils/local';
 const page = () => {
   return (
     <div className='grid grid-cols-2 gap-4 overflow-y-scroll'>
-      <div className='col-span-1 bg-white rounded-xl p-6'>
+      <div className='col-span-2 lg:col-span-1 bg-white rounded-xl p-6'>
         <div className='flex gap-2'>
           <BsInfoCircle size={30} />
           <h1 className='text-2xl font-bold items-center'>Info & FAQ</h1>
