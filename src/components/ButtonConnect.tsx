@@ -37,7 +37,7 @@ const Buttonconnect = () => {
                 return (
                   <button
                     className='bg-green-800 hover:bg-green-600 duration-300 ease-in-out cursor-pointer text-white
-                    text-left px-6 uppercase font-semibold p-3 rounded-lg w-full'
+                    px-6 uppercase font-semibold p-3 rounded-lg w-full text-center'
                     onClick={openConnectModal}
                   >
                     Login / Connect

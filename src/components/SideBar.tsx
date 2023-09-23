@@ -1,7 +1,5 @@
 import Link from 'next/link';
 import { GiPlantsAndAnimals, GiJamesBondAperture } from 'react-icons/gi';
-import { GrNewWindow } from 'react-icons/gr';
-import { FiSettings } from 'react-icons/fi';
 import {
   BsTwitter,
   BsYoutube,
@@ -101,7 +99,7 @@ const Sidebar = ({ children }: { children: React.ReactNode }) => {
           </div>
         </div>
       </div>
-      <main className='w-full p-4'>{children}</main>
+      <main className='w-full p-4 bg-slate-200'>{children}</main>
     </div>
   );
 };
