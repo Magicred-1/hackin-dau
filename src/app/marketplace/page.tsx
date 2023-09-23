@@ -21,11 +21,14 @@ const page = () => {
           <h1 className='text-2xl font-bold items-center'>Marketplace</h1>
         </div>
         <div className='mt-8 grid grid-cols-2 gap-4'>
-          <SolarCard />
-          <SolarCard />
-          <SolarCard />
-          <SolarCard />
-          <SolarCard />
+          <SolarCard
+            name='standart'
+            price={100}
+            availableNumber={100}
+            imagePath='/test.png'
+            href='/'
+            location='Perpignan, France'
+          />
         </div>
       </div>
     </div>
