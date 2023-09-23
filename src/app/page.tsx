@@ -10,7 +10,7 @@ export default function Home() {
           <BiWalletAlt size={30} />
           <h1 className='text-2xl font-bold'>Buy HSC</h1>
         </div>
-        <div className='mt-2 font-semibold text-slate-400'></div>
+        <div className='mt-2 font-semibold text-slate-400'>test</div>
       </div>
 
       <Balances />

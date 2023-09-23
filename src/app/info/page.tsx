@@ -25,27 +25,32 @@ const page = () => {
 
         <Accordion type='single' collapsible>
           <AccordionItem value='item-1'>
-            <AccordionTrigger>Is it accessible?</AccordionTrigger>
+            <AccordionTrigger>1. How do I buy solar cells?</AccordionTrigger>
             <AccordionContent>
-              Yes. It adheres to the WAI-ARIA design pattern.
+              Buying HSC NFT is simple. Simply connect, add funds to your
+              wallet, head to the Buy HSC page, select the NFT you want.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value='item-2'>
-            <AccordionTrigger>Is it accessible?</AccordionTrigger>
+            <AccordionTrigger>2. How do I get paid ?</AccordionTrigger>
             <AccordionContent>
-              Yes. It adheres to the WAI-ARIA design pattern.
+              Your monthly income is paid into your Wallet directly. The monthly
+              income you accumulate can be used immediately to do what you want.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value='item-3'>
-            <AccordionTrigger>Is it accessible?</AccordionTrigger>
+            <AccordionTrigger>3. Can I sell my solar cells ?</AccordionTrigger>
             <AccordionContent>
-              Yes. It adheres to the WAI-ARIA design pattern.
+              Yes you can sell it at any time on the resell Marketplace to
+              another user.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value='item-4'>
-            <AccordionTrigger>Is it accessible?</AccordionTrigger>
+            <AccordionTrigger>10. Are my solar assets safe ?</AccordionTrigger>
             <AccordionContent>
-              Yes. It adheres to the WAI-ARIA design pattern.
+              Yes. All solar assets are stored on the blockchain and are
+              therefore safe from any form of manipulation. They are completely
+              yours and cannot be taken away from you.
             </AccordionContent>
           </AccordionItem>
         </Accordion>
@@ -66,7 +71,7 @@ const page = () => {
               />
               HSC token
             </div>
-            <span className='text-slate-400 underline underline-offset-2 mt-2'>
+            <span className='text-slate-400 underline underline-offset-2 mt-2 cursor-pointer'>
               {shortenAddress('0xE1E71b5FeA42cBa159fF3f12C4C104eE38a33a2F')}
             </span>
           </div>
@@ -81,7 +86,7 @@ const page = () => {
               />
               HSC stacking
             </div>
-            <span className='text-slate-400 underline underline-offset-2 mt-2'>
+            <span className='text-slate-400 underline underline-offset-2 mt-2 cursor-pointer'>
               {shortenAddress('0xE1E71b5FeA42cBa159fF3f12C4C104eE38a33a2F')}
             </span>
           </div>

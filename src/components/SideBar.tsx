@@ -31,13 +31,13 @@ const Sidebar = ({ children }: { children: React.ReactNode }) => {
             <Link href='/'>
               <div className='bg-gray-100 hover:bg-gray-200 cursor-pointer my-2 p-3 rounded-lg flex gap-4 items-center'>
                 <RxDashboard size={30} />
-                Dashboard
+                Buy NGC
               </div>
             </Link>
             <Link href='/marketplace'>
               <div className='bg-gray-100 hover:bg-gray-200 cursor-pointer my-2 p-3 rounded-lg flex gap-4 items-center'>
                 <BsCashCoin size={30} />
-                Buy NGC
+                Resell Marketplace
               </div>
             </Link>
             <Link href='/stake'>
