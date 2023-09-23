@@ -1,8 +1,8 @@
 import { SolarCard } from '@/components';
 import Balances from '@/components/Balances';
-import { BiWalletAlt, BiSolidCollection } from 'react-icons/bi';
+import { BiSolidCollection, BiWalletAlt } from 'react-icons/bi';
 
-export default function Home() {
+const page = () => {
   return (
     <div className='grid grid-cols-2 gap-4 overflow-y-scroll'>
       <div className='col-span-1 bg-white rounded-xl p-6'>
@@ -18,7 +18,7 @@ export default function Home() {
       <div className='col-span-2 bg-white rounded-xl p-6'>
         <div className='flex gap-2'>
           <BiSolidCollection size={30} />
-          <h1 className='text-2xl font-bold items-center'>Collection</h1>
+          <h1 className='text-2xl font-bold items-center'>Marketplace</h1>
         </div>
         <div className='mt-8 grid grid-cols-2 gap-4'>
           <SolarCard />
@@ -30,4 +30,6 @@ export default function Home() {
       </div>
     </div>
   );
-}
+};
+
+export default page;

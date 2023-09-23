@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { useAccount } from 'wagmi';
 import { Buttonconnect } from '.';
-import { shortenAddress } from '../utils/rainbowkit.provider';
+import { shortenAddress } from '../utils/local';
 
 const Stake = () => {
   const [stake, setStake] = useState(true);
@@ -13,7 +13,7 @@ const Stake = () => {
       <div className='border rounded-lg grid grid-cols-2 bg-slate-200'>
         <button
           className={`font-bold uppercase col-span-1 text-lg text-center rounded-lg py-2 ${
-            stake ? 'bg-green-800 text-white' : 'hover:text-slate-200 '
+            stake ? 'bg-green-800 text-white' : 'hover:text-black/50'
           } duration-300 ease-in-out`}
           onClick={() => setStake((prev) => !prev)}
         >
@@ -54,7 +54,7 @@ const Stake = () => {
         className={`border-b-[1px] border-gray-200 w-full mx-auto flex ${
           isDisconnected ? 'm-8' : 'mb-8'
         }`}
-      ></span>
+      />
 
       {isDisconnected && <Buttonconnect />}
     </div>

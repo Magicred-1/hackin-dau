@@ -3,7 +3,7 @@
 import '@rainbow-me/rainbowkit/styles.css';
 import { getDefaultWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit';
 import { configureChains, createConfig, WagmiConfig } from 'wagmi';
-import { mainnet, polygon, optimism, arbitrum, base, zora } from 'wagmi/chains';
+import { polygon } from 'wagmi/chains';
 import { publicProvider } from 'wagmi/providers/public';
 
 const { chains, publicClient } = configureChains([polygon], [publicProvider()]);
@@ -15,7 +15,7 @@ const { connectors } = getDefaultWallets({
 });
 
 const wagmiConfig = createConfig({
-  autoConnect: true,
+  autoConnect: false,
   connectors,
   publicClient,
 });
@@ -31,7 +31,3 @@ export const GlobalContextProvider = ({
     </WagmiConfig>
   );
 };
-
-//UTILS FUNCTIONS
-export const shortenAddress = (address: string | undefined) =>
-  `${address?.slice(0, 5)}...${address?.slice(address.length - 4)}`;
