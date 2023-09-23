@@ -14,7 +14,7 @@ export default function Home() {
         </div>
         <div className='mt-8 grid grid-cols-6 gap-4'>
           <SolarCard
-            name='standart'
+            name='standard'
             price={100}
             availableNumber={100}
             imagePath='/1.png'

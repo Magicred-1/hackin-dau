@@ -3,6 +3,7 @@ import { HiLocationMarker } from 'react-icons/hi';
 import { Badge } from '@/components/ui/badge';
 import { TiFlash } from 'react-icons/ti';
 import { shortenAddress } from '@/utils/local';
+import Modal from './Modal';
 interface SolarCardProps {
   name: string;
   imagePath: string;
@@ -63,29 +64,7 @@ const SolarCard = ({
           </p>
         )}
       </div>
-      <div className='p-4'>
-        <a
-          href='#'
-          className='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
-        >
-          Buy
-          <svg
-            className='w-3.5 h-3.5 ml-2'
-            aria-hidden='true'
-            xmlns='http://www.w3.org/2000/svg'
-            fill='none'
-            viewBox='0 0 14 10'
-          >
-            <path
-              stroke='currentColor'
-              strokeLinecap='round'
-              strokeLinejoin='round'
-              strokeWidth='2'
-              d='M1 5h12m0 0L9 1m4 4L9 9'
-            />
-          </svg>
-        </a>
-      </div>
+      <Modal />
     </div>
   );
 };

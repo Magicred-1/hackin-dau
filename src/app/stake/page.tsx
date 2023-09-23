@@ -9,10 +9,10 @@ const page = () => {
       <div className='col-span-2 lg:col-span-1 bg-white rounded-xl p-6'>
         <div className='flex gap-2 items-center'>
           <BiSolidCoinStack size={30} />
-          <h1 className='text-2xl font-bold'>Stake NGC</h1>
+          <h1 className='text-2xl font-bold'>Stake HSC</h1>
         </div>
         <h2 className='mt-2 font-semibold text-slate-400'>
-          Stake, hold, and earn compounding NGC.
+          Stake, hold, and earn compounding HSC.
         </h2>
 
         <div className='mt-8 border rounded-xl p-6'>

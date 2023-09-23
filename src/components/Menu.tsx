@@ -38,7 +38,7 @@ const Menu = () => {
       )}
       {menu && (
         <div className='bg-slate-400 h-screen min-w-[260px] flex sm:hidden absolute z-50'>
-          <div className='p-4 flex flex-col justify-between h-screen fixed'>
+          <div className='p-4 flex flex-col justify-between h-screen fixed min-w-[260px]'>
             <div className='flex flex-col'>
               <Link
                 href='/'
@@ -54,7 +54,7 @@ const Menu = () => {
               <Link href='/' onClick={() => closeMenu()}>
                 <div className='bg-gray-100 hover:bg-gray-200 cursor-pointer my-2 p-3 rounded-lg flex gap-4 items-center'>
                   <RxDashboard size={30} />
-                  Buy NGC
+                  Buy HSC
                 </div>
               </Link>
               <Link href='/marketplace' onClick={() => closeMenu()}>

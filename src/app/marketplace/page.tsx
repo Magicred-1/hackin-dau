@@ -1,6 +1,6 @@
 import { BuyOrConnect, SolarCard } from '@/components';
 import Balances from '@/components/Balances';
-import { BiSolidCollection, BiWalletAlt } from 'react-icons/bi';
+import { BiSolidCollection } from 'react-icons/bi';
 
 const page = () => {
   return (
@@ -15,7 +15,7 @@ const page = () => {
         </div>
         <div className='mt-8 grid grid-cols-6 gap-4'>
           <SolarCard
-            name='standart'
+            name='standard'
             price={100}
             availableNumber={100}
             imagePath='/1.png'

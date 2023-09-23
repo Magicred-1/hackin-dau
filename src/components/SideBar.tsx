@@ -19,7 +19,7 @@ const Sidebar = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className='flex flex-col sm:flex-row'>
       <div className='bg-white border-r-[1px] sm:flex hidden flex-col justify-between min-w-[260px] h-screen z-50'>
-        <div className='p-4 flex flex-col justify-between h-screen fixed'>
+        <div className='p-4 flex flex-col justify-between h-screen fixed min-w-[260px]'>
           <div className='flex flex-col'>
             <Link href='/' className='flex gap-4 items-center'>
               <div className='bg-green-800 text-white p-3 rounded-lg'>
@@ -31,7 +31,7 @@ const Sidebar = ({ children }: { children: React.ReactNode }) => {
             <Link href='/'>
               <div className='bg-gray-100 hover:bg-gray-200 cursor-pointer my-2 p-3 rounded-lg flex gap-4 items-center'>
                 <RxDashboard size={30} />
-                Buy NGC
+                Buy HSC
               </div>
             </Link>
             <Link href='/marketplace'>
@@ -43,7 +43,7 @@ const Sidebar = ({ children }: { children: React.ReactNode }) => {
             <Link href='/stake'>
               <div className='bg-gray-100 hover:bg-gray-200 cursor-pointer my-2 p-3 rounded-lg flex gap-4 items-center'>
                 <BiSolidCoinStack size={30} />
-                Stake NGC
+                Stake HSC
               </div>
             </Link>
             {/* <Link href='/offset'>
