@@ -42,7 +42,7 @@ const Modal = () => {
       </div>
       {modal && (
         <div className='fixed flex justify-center items-center z-50 left-0 right-0 top-0 bottom-0 bg-[#5d5d5d1d]'>
-          <Card className='sm:w-3/4 lg:w-[600px]'>
+          <Card className='w-3/4 lg:w-[600px]'>
             <CardHeader>
               <div className='flex justify-between'>
                 <div>

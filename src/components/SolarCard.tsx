@@ -51,7 +51,7 @@ const SolarCard = ({
         <div className='flex justify-between mt-4'>
           <div className='font-semibold text-green-600 text-lg flex items-center'>
             <TiFlash size={25} />
-            {price} MATIC
+            {price} CRC
           </div>
           <Badge className='text-normal text-white'>{name}</Badge>
         </div>

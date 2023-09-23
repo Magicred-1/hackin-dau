@@ -84,7 +84,7 @@ const page = () => {
                 alt='img'
                 className='rounded-full'
               />
-              HSC stacking
+              HSC staking
             </div>
             <span className='text-slate-400 underline underline-offset-2 mt-2 cursor-pointer'>
               {shortenAddress('0xE1E71b5FeA42cBa159fF3f12C4C104eE38a33a2F')}

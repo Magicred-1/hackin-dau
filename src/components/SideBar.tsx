@@ -12,8 +12,10 @@ import {
 } from 'react-icons/bs';
 import { RxDashboard } from 'react-icons/rx';
 import { BiSolidCoinStack } from 'react-icons/bi';
+import { RiNftFill } from 'react-icons/ri';
 import ButtonConnect from './ButtonConnect';
 import Menu from './Menu';
+import Image from 'next/image';
 
 const Sidebar = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -22,10 +24,11 @@ const Sidebar = ({ children }: { children: React.ReactNode }) => {
         <div className='p-4 flex flex-col justify-between h-screen fixed min-w-[260px]'>
           <div className='flex flex-col'>
             <Link href='/' className='flex gap-4 items-center'>
-              <div className='bg-green-800 text-white p-3 rounded-lg'>
+              {/* <div className='bg-green-800 text-white p-3 rounded-lg'>
                 <GiPlantsAndAnimals size={30} />
-              </div>
-              <h1 className='text-xl font-bold'>Hello SunChain</h1>
+              </div> */}
+              {/* <h1 className='text-xl font-bold'>Hello SunChain</h1> */}
+              <Image src='/logo.png' width={180} height={50} alt='logo' />
             </Link>
             <span className='border-b-[1px] border-gray-200 w-full mx-auto mt-4 mb-2 flex'></span>
             <Link href='/'>
@@ -52,6 +55,12 @@ const Sidebar = ({ children }: { children: React.ReactNode }) => {
                 Offset
               </div>
             </Link> */}
+            <Link href='/my-nft'>
+              <div className='bg-gray-100 hover:bg-gray-200 cursor-pointer my-2 p-3 rounded-lg flex gap-4 items-center'>
+                <RiNftFill size={30} />
+                My Nfts
+              </div>
+            </Link>
             <Link href='/info'>
               <div className='bg-gray-100 hover:bg-gray-200 cursor-pointer my-2 p-3 rounded-lg flex gap-4 items-center'>
                 <BsInfoCircle size={30} />
