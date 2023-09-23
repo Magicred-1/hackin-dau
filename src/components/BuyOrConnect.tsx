@@ -19,7 +19,7 @@ const BuyOrConnect = () => {
             tutorial: How to Buy HSC Nft.
           </p>
           <p className='mt-2'>
-            Otherwise, if you already have a wallet with CRC on Polygon, you can
+            Otherwise, if you already have a wallet with CRC on Pocr, you can
             buy Nft directly on our collection page or in the resell
             marketplace.
           </p>

@@ -10,10 +10,24 @@ import {
 } from './ui/card';
 import { AiFillCloseCircle } from 'react-icons/ai';
 import { useState } from 'react';
+import { useContractRead } from 'wagmi';
+import { helloSunchineAbi } from '@/utils/helloSunChain.abi';
 
 const Modal = () => {
   const [modal, setModal] = useState(false);
   if (modal) document.body.style.overflow = 'hidden';
+
+  const { data: getTokenURI } = useContractRead({
+    address: process.env.NEXT_PUBLIC_NFT1_CONTRACT_ADDRESS! as `0x${string}`,
+    abi: helloSunchineAbi,
+    functionName: 'baseTokenURI',
+  });
+
+  const convertUriToJson = async (uri: string) => {
+    const res = await fetch(uri);
+    const json = await res.json();
+    return json;
+  };
 
   return (
     <>
@@ -67,6 +81,10 @@ const Modal = () => {
               <button
                 className='px-4 py-2 bg-blue-600 text-white text-xl rounded-lg 
                 flex justify-center items-center hover:bg-blue-900 ease-in-out duration-300'
+                onClick={() => {
+                  console.log(getTokenURI);
+                  convertUriToJson(getTokenURI!);
+                }}
               >
                 Buy
               </button>

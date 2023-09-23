@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { GiPlantsAndAnimals } from 'react-icons/gi';
 import {
   BsTwitter,
   BsYoutube,

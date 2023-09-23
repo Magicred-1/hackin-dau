@@ -93,9 +93,9 @@ const Buttonconnect = () => {
                     >
                       <span>{account.displayName}</span>
                     </button>
-                    <span className='px-4 py-2 rounded-lg bg-[#FFB811] font-bold text-white flex items-center'>
+                    <span className='px-2 py-2 rounded-lg bg-[#FFB811] font-bold text-white flex items-center'>
                       {account.displayBalance
-                        ? `${account.displayBalance}`
+                        ? `${Number(account.balanceFormatted).toFixed(2)} CRC`
                         : ''}
                     </span>
                   </div>
