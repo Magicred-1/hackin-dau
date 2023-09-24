@@ -39,7 +39,7 @@ const Menu = () => {
         </div>
       )}
       {menu && (
-        <div className='bg-slate-400 h-screen min-w-[260px] flex sm:hidden absolute z-50'>
+        <div className='bg-slate-400 h-screen min-w-[260px] flex sm:hidden absolute z-50 overflow-auto'>
           <div className='p-4 flex flex-col justify-between h-screen fixed min-w-[260px] overflow-auto'>
             <div className='flex flex-col overflow-auto'>
               <Link
