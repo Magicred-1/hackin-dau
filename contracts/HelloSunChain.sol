@@ -9,9 +9,12 @@ contract HelloSunChain is ERC721URIStorage, Ownable {
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
 
-    string public baseTokenURI = "https://emerald-impressive-salmon-919.mypinata.cloud/ipfs/QmUdduYrxAksA93kjYUwPMmqGfAV62m5jerRt4TeahEaKY";
+    string public baseTokenURI =
+        "https://emerald-impressive-salmon-919.mypinata.cloud/ipfs/QmUdduYrxAksA93kjYUwPMmqGfAV62m5jerRt4TeahEaKY";
     uint256 public constant MAX_SUPPLY = 10000;
     uint256 public constant PRICE = 0.001 ether;
+
+    mapping(address => uint256[]) private userTokens;
 
     event CreatedNFT(uint256 indexed tokenId, string tokenURI);
 
@@ -27,14 +30,17 @@ contract HelloSunChain is ERC721URIStorage, Ownable {
         _mint(msg.sender, newItemId);
         _setTokenURI(newItemId, baseTokenURI);
 
+        userTokens[msg.sender].push(newItemId);
+
         emit CreatedNFT(newItemId, baseTokenURI);
     }
-        
+
     function burn(uint256 tokenId) public onlyOwner {
         require(_exists(tokenId), "Token does not exist");
+        _removeTokenFromUser(msg.sender, tokenId);
         _burn(tokenId);
     }
-    
+
     function totalSupply() public view returns (uint256) {
         return _tokenIds.current();
     }
@@ -43,8 +49,28 @@ contract HelloSunChain is ERC721URIStorage, Ownable {
         baseTokenURI = newBaseURI;
     }
 
-    function setTokenURI(uint256 tokenId, string memory newTokenURI) public onlyOwner {
+    function setTokenURI(
+        uint256 tokenId,
+        string memory newTokenURI
+    ) public onlyOwner {
         require(_exists(tokenId), "Token does not exist");
         _setTokenURI(tokenId, newTokenURI);
+    }
+
+    function getUserNFTs(address user) public view returns (uint256[] memory) {
+        return userTokens[user];
+    }
+
+    function _removeTokenFromUser(address user, uint256 tokenId) internal {
+        uint256[] storage tokens = userTokens[user];
+        for (uint256 i = 0; i < tokens.length; i++) {
+            if (tokens[i] == tokenId) {
+                if (i != tokens.length - 1) {
+                    tokens[i] = tokens[tokens.length - 1];
+                }
+                tokens.pop();
+                break;
+            }
+        }
     }
 }

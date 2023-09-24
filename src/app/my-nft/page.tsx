@@ -1,4 +1,4 @@
-import { Balances, BuyOrConnect, SolarCard } from '@/components';
+import { Balances, BuyOrConnect, SolarCard, MyNft } from '@/components';
 import { BiSolidCollection } from 'react-icons/bi';
 
 const page = () => {
@@ -13,38 +13,7 @@ const page = () => {
           <h1 className='text-2xl font-bold items-center'>My Nfts</h1>
         </div>
         <div className='mt-8 grid grid-cols-6 gap-4'>
-          <SolarCard
-            name='standard'
-            price={100}
-            availableNumber={100}
-            imagePath='/1.png'
-            href='/'
-            location='Perpignan, France'
-          />
-          <SolarCard
-            name='premium'
-            price={500}
-            availableNumber={100}
-            imagePath='/5.png'
-            href='/'
-            location='Perpignan, France'
-          />
-          <SolarCard
-            name='epic'
-            price={1000}
-            availableNumber={100}
-            imagePath='/3.png'
-            href='/'
-            location='Perpignan, France'
-          />
-          <SolarCard
-            name='legendary'
-            price={10000}
-            availableNumber={100}
-            imagePath='/4.png'
-            href='/'
-            location='Perpignan, France'
-          />
+          <MyNft />
         </div>
       </div>
     </div>

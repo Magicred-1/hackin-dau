@@ -12,6 +12,7 @@ interface SolarCardProps {
   price: number;
   location: string;
   reseller?: string;
+  myWallet?: string;
 }
 
 const SolarCard = ({
@@ -22,6 +23,7 @@ const SolarCard = ({
   price,
   location,
   reseller,
+  myWallet,
 }: SolarCardProps) => {
   return (
     <div className='bg-white border border-gray-200 rounded-lg shadow col-span-6 md:col-span-3 xl:col-span-2 relative'>
@@ -64,7 +66,7 @@ const SolarCard = ({
           </p>
         )}
       </div>
-      <Modal />
+      <Modal location={location} price={price} name={name} />
     </div>
   );
 };

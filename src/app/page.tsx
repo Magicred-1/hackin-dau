@@ -17,7 +17,7 @@ export default function Home() {
             name='standard'
             price={100}
             availableNumber={100}
-            imagePath='/1.png'
+            imagePath='https://emerald-impressive-salmon-919.mypinata.cloud/ipfs/QmeY8oXzqxxzzFxrV5S1Q46BEhufQsyXsw1vcSLJ2QYC6W'
             href='/'
             location='Perpignan, France'
           />
