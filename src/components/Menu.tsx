@@ -39,8 +39,8 @@ const Menu = () => {
         </div>
       )}
       {menu && (
-        <div className='bg-slate-400 h-screen min-w-[260px] flex sm:hidden absolute z-50 overflow-auto'>
-          <div className='p-4 flex flex-col justify-between h-screen fixed min-w-[260px] overflow-auto'>
+        <div className='bg-slate-400 h-screen min-w-[260px] flex sm:hidden absolute z-50'>
+          <div className='p-4 flex flex-col justify-between h-screen fixed min-w-[260px]'>
             <div className='flex flex-col overflow-auto'>
               <Link
                 href='/'
@@ -98,7 +98,7 @@ const Menu = () => {
               </button>
             </div>
 
-            <div className='flex flex-col'>
+            <div className='flex flex-col overflow-auto'>
               <span className='border-b-[1px] border-gray-200 w-full mx-auto pt-3 flex mb-4'></span>
               <div className='flex gap-3 mb-2'>
                 <div className='rounded-lg bg-gray-800 hover:bg-gray-600 duration-300 ease-in-out p-3 text-white cursor-pointer'>
