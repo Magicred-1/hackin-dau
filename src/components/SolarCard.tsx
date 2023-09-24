@@ -13,6 +13,7 @@ interface SolarCardProps {
   location: string;
   reseller?: string;
   myWallet?: string;
+  howMuch?: number;
 }
 
 const SolarCard = ({
@@ -24,6 +25,7 @@ const SolarCard = ({
   location,
   reseller,
   myWallet,
+  howMuch,
 }: SolarCardProps) => {
   return (
     <div className='bg-white border border-gray-200 rounded-lg shadow col-span-6 md:col-span-3 xl:col-span-2 relative'>
@@ -46,17 +48,26 @@ const SolarCard = ({
         />
       </div>
       <div className='p-4 flex flex-col'>
-        <div className='flex gap-2 items-center'>
-          <HiLocationMarker className='inline-block mr-1' size={25} />
-          <h3 className='font-semibold text-xl'>{location}</h3>
-        </div>
-        <div className='flex justify-between mt-4'>
-          <div className='font-semibold text-green-600 text-lg flex items-center'>
-            <TiFlash size={25} />
-            {price} CRC
+        {!howMuch && (
+          <>
+            <div className='flex gap-2 items-center'>
+              <HiLocationMarker className='inline-block mr-1' size={25} />
+              <h3 className='font-semibold text-xl'>{location}</h3>
+            </div>
+            <div className='flex justify-between mt-4'>
+              <div className='font-semibold text-green-600 text-lg flex items-center'>
+                <TiFlash size={25} />
+                {price} CRC
+              </div>
+              <Badge className='text-normal text-white'>{name}</Badge>
+            </div>
+          </>
+        )}
+        {howMuch && (
+          <div>
+            <span>You have {howMuch} of it</span>
           </div>
-          <Badge className='text-normal text-white'>{name}</Badge>
-        </div>
+        )}
         {reseller && (
           <p className='mt-4'>
             <span className='font-semibold italic text-slate-400 cursor-pointer'>
@@ -66,7 +77,7 @@ const SolarCard = ({
           </p>
         )}
       </div>
-      <Modal location={location} price={price} name={name} />
+      {!howMuch && <Modal location={location} price={price} name={name} />}
     </div>
   );
 };

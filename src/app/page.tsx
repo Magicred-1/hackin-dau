@@ -15,7 +15,7 @@ export default function Home() {
         <div className='mt-8 grid grid-cols-6 gap-4'>
           <SolarCard
             name='standard'
-            price={100}
+            price={0.001}
             availableNumber={100}
             imagePath='https://emerald-impressive-salmon-919.mypinata.cloud/ipfs/QmeY8oXzqxxzzFxrV5S1Q46BEhufQsyXsw1vcSLJ2QYC6W'
             href='/'
@@ -23,7 +23,7 @@ export default function Home() {
           />
           <SolarCard
             name='premium'
-            price={500}
+            price={0.01}
             availableNumber={100}
             imagePath='/5.png'
             href='/'
@@ -31,7 +31,7 @@ export default function Home() {
           />
           <SolarCard
             name='epic'
-            price={1000}
+            price={0.1}
             availableNumber={100}
             imagePath='/3.png'
             href='/'
@@ -39,7 +39,7 @@ export default function Home() {
           />
           <SolarCard
             name='legendary'
-            price={10000}
+            price={1}
             availableNumber={100}
             imagePath='/4.png'
             href='/'

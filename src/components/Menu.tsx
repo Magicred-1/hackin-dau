@@ -40,7 +40,7 @@ const Menu = () => {
       )}
       {menu && (
         <div className='bg-slate-400 h-screen min-w-[260px] flex sm:hidden absolute z-50'>
-          <div className='p-4 flex flex-col justify-between h-screen fixed min-w-[260px]'>
+          <div className='p-4 flex flex-col justify-between h-screen fixed min-w-[260px] overflow-auto'>
             <div className='flex flex-col overflow-auto'>
               <Link
                 href='/'
@@ -72,7 +72,7 @@ const Menu = () => {
                   Stake NGC
                 </div>
               </Link>
-              <Link href='/my-nft'>
+              <Link href='/my-nft' onClick={() => closeMenu()}>
                 <div className='bg-gray-100 hover:bg-gray-200 cursor-pointer my-2 p-3 rounded-lg flex gap-4 items-center'>
                   <RiNftFill size={30} />
                   My Nfts

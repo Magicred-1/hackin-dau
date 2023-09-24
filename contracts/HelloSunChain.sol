@@ -61,6 +61,19 @@ contract HelloSunChain is ERC721URIStorage, Ownable {
         return userTokens[user];
     }
 
+    function getUserTokenURIs(
+        address user
+    ) public view returns (string[] memory) {
+        uint256[] memory tokens = userTokens[user];
+        string[] memory tokenURIs = new string[](tokens.length);
+
+        for (uint256 i = 0; i < tokens.length; i++) {
+            tokenURIs[i] = tokenURI(tokens[i]);
+        }
+
+        return tokenURIs;
+    }
+
     function _removeTokenFromUser(address user, uint256 tokenId) internal {
         uint256[] storage tokens = userTokens[user];
         for (uint256 i = 0; i < tokens.length; i++) {

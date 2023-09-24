@@ -280,6 +280,25 @@ export const helloSunchineAbi = [
     inputs: [
       {
         internalType: 'address',
+        name: 'user',
+        type: 'address',
+      },
+    ],
+    name: 'getUserTokenURIs',
+    outputs: [
+      {
+        internalType: 'string[]',
+        name: '',
+        type: 'string[]',
+      },
+    ],
+    stateMutability: 'view',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'address',
         name: 'owner',
         type: 'address',
       },
