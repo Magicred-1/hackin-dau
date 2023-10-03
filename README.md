@@ -1,6 +1,6 @@
 # ☀️ Hello SunChain - Solar Tokenization Project 🔗
 
-🏆 1st Place - Winner of the Hackin'Dau on the 24th of October in Paris. (Djason Gadiou / Hamza Mekhaneg / Yassine Hargane / Théo Samarinsinghe / Yassine Ouhmmou)
+🏆 1st Place - Winner of the Hackin'Dau on the 24th of September in Paris. (Djason Gadiou / Hamza Mekhaneg / Yassine Hargane / Théo Samarinsinghe / Yassine Ouhmmou)
 
 Welcome to the Hello Sun Chain project! We are leveraging cutting-edge technologies to revolutionize the way solar energy is tokenized and rewarded powered by <img src="https://avatars.githubusercontent.com/u/104393486?s=200&v=4" width="20" height="20"> PoCR.
 
